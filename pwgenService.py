@@ -35,6 +35,7 @@ def home():
                 <li>count - How many characters should be generated</li>
               </ul></p>
               <p>The generated passwords are returned in a list in JSON format.</p>
+              <p>Example: <a href="http://localhost:5000/api/v1/password?length=14&specials=2&numbers=2&count=5>http://localhost:5000/api/v1/password?length=14&specials=2&numbers=2&count=5</a></p>
               </body></html>'''
 
 
