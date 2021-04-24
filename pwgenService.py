@@ -26,7 +26,7 @@ def _get_int_arg_from_request(arg, the_request):
 def home():
     return '''<!DOCTYPE html>
               <html><head><title>pwgenService</title></head><body>
-              <h1>PWGen Service</h1>
+              <h1>pwgenService</h1>
               <p>Get passwords by sending GET requests to /api/v1/password and include these parameters:</p>
               <p><ul>
                 <li>length - the length of the password(s) to genreate</li>
@@ -34,8 +34,8 @@ def home():
                 <li>numbers - the number of values the password should include</li>
                 <li>count - How many characters should be generated</li>
               </ul></p>
-              <p>The generated passwords are returned in a list in JSON format.</p>
-              <p>Example: <a href="http://localhost:5000/api/v1/password?length=14&specials=2&numbers=2&count=5">http://localhost:5000/api/v1/password?length=14&specials=2&numbers=2&count=5</a></p>
+              <p>Example: <a href="/api/v1/password?length=14&specials=2&numbers=2&count=5">/api/v1/password?length=14&specials=2&numbers=2&count=5</a></p>
+              <p>The generated passwords are returned as a list in JSON format.</p>
               </body></html>'''
 
 
