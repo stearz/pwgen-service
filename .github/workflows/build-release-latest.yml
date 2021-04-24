@@ -53,5 +53,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: stearz/pwgenService/pwgenService
+          repository: stearz/pwgen-service/pwgen-service
           tag_with_ref: true
