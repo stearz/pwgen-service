@@ -27,9 +27,9 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pytest
+    # - name: Test with pytest
+    #   run: |
+    #     pytest
     
   push_to_registries:
     name: Push Docker image to multiple registries
@@ -45,7 +45,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: stearz/pwgen-service
+          repository: stearz/pwgenService
           tag_with_ref: true
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
@@ -53,5 +53,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: stearz/pwgen-service/pwgen-service
+          repository: stearz/pwgenService/pwgenService
           tag_with_ref: true

@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD [ "python", "./pwgen-service.py" ]
+CMD [ "python", "./pwgenService.py" ]
