@@ -11,7 +11,7 @@ from flask_opentracing import FlaskTracing
 from flask import Flask, request, jsonify
 from waitress import serve
 from os import getenv
-JAEGER_HOST = getenv('JAEGER_HOST', 'mck8s-tempo.tempo.svc')
+JAEGER_HOST = getenv('JAEGER_HOST', 'localhost')
 
 # init
 app = Flask(__name__)
