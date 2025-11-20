@@ -11,7 +11,7 @@ jobs:
         python-version: [3.9, 3.11]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
@@ -39,7 +39,7 @@ jobs:
       contents: read
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Push to Docker Hub
         uses: docker/build-push-action@v6
         with:
